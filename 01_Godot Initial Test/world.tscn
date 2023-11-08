@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfqirh4b5lhmq"]
+
+[ext_resource type="PackedScene" uid="uid://csohjyps5bhmr" path="res://NEW SH/StarherderCharacterBody2D.tscn" id="1_hx4ye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aflbv"]
+size = Vector2(6553, 609)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks5tj"]
+size = Vector2(483.5, 4024.5)
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(774, 950)
+shape = SubResource("RectangleShape2D_aflbv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2500, -739)
+shape = SubResource("RectangleShape2D_ks5tj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3982, -739)
+shape = SubResource("RectangleShape2D_ks5tj")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -2711.0
+offset_top = 647.0
+offset_right = -2601.0
+offset_bottom = 702.0
+scale = Vector2(62.8539, 12.2018)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(342, -1516)
+zoom = Vector2(0.15, 0.15)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_hx4ye")]
+position = Vector2(-238, -396)
